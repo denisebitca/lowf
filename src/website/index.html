@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lowf is a website that is our own take on one-on-one chatting websites. Join in and chat today!">
+    <meta name="title" content="lowf - low-effort one-on-one chatting: just pick a name!">
+    <meta name="keywords" content="shamchat, sham.chat, rolechat, rolechat.org, chatting, rp chatting, roleplay, roleplaying, rp chat, roleplay chatting, chatbox, omegle, omegle.com, lowf, lowf.codes, lowf chatting, lowf chat, lowfchat, shamchat.com, lowf rp chat, rp, roleplay, anonymous chat, chats, chat">
+    <title>lowf</title>
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="spin.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <script>
+        var styles = ['color: black', 'text-align: center', 'font-size: 50px', 'font-family: monospace'].join(';');
+        var styles2 = ['color: black', 'font-weight: bold', 'font-size: 20px', 'font-family: monospace'].join(';');
+        console.log('%clowf', styles);
+        console.log("%cHey there curious peeker! Do you understand anything about coding with Javascript and node.js? If so, hit us up on lowfchat@gmail.com", styles2)
+    </script>
+</head>
+<body>
+    <div id="overlay">
+        <div class="lds-css ng-scope">
+            <div class="lds-spin" style="width:100%;height:100%"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
+        </div>
+        <span>Loading...</span>
+    </div>
+    <div id="navbar">
+        <div id="return">
+            <i class="material-icons back">done
+                <span class="tooltiptext">Click here to leave or reconnect during chatting.</span>
+            </i>
+        </div>
+        <span class="logo">lowf</span>
+        <div id="settings">
+            <i class="material-icons settings">settings_applications
+                <span class="tooltiptext">Click here to change your settings.</span>
+            </i>
+            <div id="settingsmenu" class="faster">
+                <span>Settings</span>
+                <div class="settingstoggles">
+                    <input id="sound" checked type="checkbox">
+                    <span>Toggle sound</span>
+                </div>
+                <div class="settingstoggles">
+                    <input id="darkmode" type="checkbox">
+                    <span>Toggle dark mode</span>
+                </div>
+                <label id="na2">
+                    <input placeholder="New name" maxlength="50" class="namebox" id="namebox-settings" disabled></textarea>
+                    <span style="text-align:center">Change name (max 50 chars, only while chatting)</span>
+                </label>
+                <div class="button" id="button_changename">
+                        <span>Change name</span>
+                </div>
+                <div class="checkmark">
+                    <i class="material-icons namechanged">check</i>
+                    <span>Name changed.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mainpage">
+        <h2 class="subtitle" style="font-size: 15px; text-decoration: underline;">contact: lowf@lowf.codes</h2>
+        <h2 class="subtitle">low-effort one-on-one chatting: just pick a name!</h2>
+        <div id="name">
+            <label id="na"><input maxlength="50" class="namebox" id="namebox"></textarea>
+            <span style="text-align:center">Display name (max 50 chars)</span></label>
+            <span id="confirmation"></span>
+        </div>
+        <div id="bts">
+            <div class="button" id="button_connect">
+                <span>Connect</span>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div id="chat">
+        <div class="static"></div>
+        <div id="messagearea">
+            <div id="messagecontainer">
+
+            </div>
+        </div>
+        <div id="sendbox">
+                <textarea maxlength="501" id="textbox"></textarea>
+                <div class="send" id="button">
+                    <span>↵</span>
+                </div>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script data-cookie-notice='{ "learnMoreLinkEnabled": true, "learnMoreLinkHref": "/privatepolicy.txt" }' src="cookie.notice.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="material-icons.min.css">
+    <script type="text/javascript" src="popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="notify.min.js"></script>
+    <script type="text/javascript" src="app.min.js"></script>
+</body>
+</html>
