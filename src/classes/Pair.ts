@@ -1,5 +1,6 @@
 import { Message } from "./Message";
 import { ChatUser } from "./ChatUser";
+import config from "../config.json";
 import { v4 as uuidv4 } from "uuid";
 import fs from "fs";
 
@@ -21,7 +22,7 @@ export class Pair{
         this.user2.setState(ChatUser.PAIRED);
 
         //Start logging
-        this.lfile = fs.writeFileSync(__dirname + '/../public/logs/' + this.id + ".txt", "lowf.codes conversation\n\nThis is a conversation between " + this.user1.name + ' and ' + this.user2.name + '.\n\n');
+        this.lfile = fs.writeFileSync(config.logDir + this.id + ".txt", config.websitedomain + " conversation\n\nThis is a conversation between " + this.user1.name + ' and ' + this.user2.name + '.\n\n');
     }
     unpair() : void {
         if(this.active){
@@ -32,9 +33,9 @@ export class Pair{
     }
     send(msg : Message) : void {
         if(typeof(msg.body) === "string"){
-            fs.appendFileSync(__dirname + '/../public/logs/' + this.id + ".txt", msg.body + ": " + msg.message + '\n');
+            fs.appendFileSync(config.logDir + this.id + ".txt", msg.body + ": " + msg.message + '\n');
         } else {
-            fs.appendFileSync(__dirname + '/../public/logs/' + this.id + ".txt", msg.message + '\n');
+            fs.appendFileSync(config.logDir + this.id + ".txt", msg.message + '\n');
         }
         this.user1.send(msg);
         this.user2.send(msg);

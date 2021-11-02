@@ -11,7 +11,7 @@ export function log(type : string, message : string) : void{
 }
 
 export function runTesting() : void{
-    var client : ws = new ws("ws://localhost:3000");
+    var client : ws = new ws("ws://localhost:" + config.port);
     ws.once(client, "open").then(()=>{
         log("debug", "Client connection open! Testing messages...");
         client.onclose = ()=>{

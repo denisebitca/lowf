@@ -42,7 +42,7 @@ export class ChatUser {
         this.ip = ip;
         this.socket = socket;
         this.pair = null;
-	this.joindate = Date.now().toString();
+	    this.joindate = Date.now().toString();
 
         //personal event handlers
 
@@ -53,7 +53,7 @@ export class ChatUser {
             }
             try{
                 var parsedMsg : Message = JSON.parse(message.data);
-                //TODO: why am i not checking whether or not these properties exist?
+                
                 if(parsedMsg.type === "command"){
                     //command parse
                     if(parsedMsg.body === ChatUser._search){
@@ -100,7 +100,7 @@ export class ChatUser {
                                         user2name: this.pair.user2.name
                                     }
                                 }
-                                fs.writeFileSync(__dirname + '/../report/' + uuidv4() + ".json", JSON.stringify(reportprep));
+                                fs.writeFileSync(config.reportDir + uuidv4() + ".json", JSON.stringify(reportprep));
                             }
                         }
 
@@ -127,6 +127,7 @@ export class ChatUser {
                 } else throw new Error();
     
             } catch(error) {
+                //TODO: Chief, I don't know if this is the best way of checking for malformed commands. Look into this please.
                 log("error/P1", "Malformed request from IP " + this.ip);
                 log("error/P2", "Request was " + message.data);
                 this.terminate();
@@ -223,9 +224,6 @@ export class ChatUser {
            this.pair?.unpair()
            this.pair = null;
         }
-        /*if(this.socket.readyState != ws.CLOSING && this.socket.readyState != ws.CLOSED){
-            this.socket.close();
-        }*/
         ChatServer.delUser(this);
     }
 

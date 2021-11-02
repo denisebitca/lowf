@@ -1,10 +1,8 @@
 'use strict';
 import express from "express";
 import http from "node:http";
-//import https from "https";
 import ws from "ws";
 import random from "random";
-import fs from "fs";
 
 import { ChatUser } from "./ChatUser";
 import { Pair } from "./Pair";
@@ -14,12 +12,6 @@ import { log /*, runTesting*/ } from "../functions/DebugTools";
 var debug : boolean = config.debug;
 
 //SSL unneeded - i am running this through a reverse proxy
-
-/*if(!debug){
-    var privateKey  = fs.readFileSync('/etc/letsencrypt/live/lowf.codes/privkey.pem', 'utf8');
-    var certificate = fs.readFileSync('/etc/letsencrypt/live/lowf.codes/fullchain.pem', 'utf8');
-    var credentials = {key: privateKey, cert: certificate, ciphers: 'ECDHE-RSA-AES256-SHA:AES256-SHA:RC4-SHA:RC4:HIGH:!MD5:!aNULL:!EDH:!AESGCM', honorCipherOrder: true};
-}*/
 
 export class ChatServer {
 

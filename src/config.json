@@ -1,4 +1,7 @@
 {
     "port": 8082,
-    "debug": false
+    "debug": false,
+	"websitedomain": "lowf.codes",
+    "logDir": "",
+    "reportDir": ""
 }
