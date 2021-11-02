@@ -28,7 +28,7 @@ export class ChatServer {
         ChatServer.app = express();
 
         //Setting up Express routes
-        ChatServer.app.use('/', express.static(__dirname + '/../public'));
+        ChatServer.app.use('/', express.static(config.websiteDir));
 
         if(debug){
             ChatServer.server = ChatServer.app.listen(port, ()=>{

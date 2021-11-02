@@ -58,9 +58,11 @@ export class ChatUser {
                     //command parse
                     if(parsedMsg.body === ChatUser._search){
                         //user has requested to search for other users
-
-                        if(debug) log("debug", "command parse > search request")
-                        this.setState(ChatUser.LOOKING);
+                        //user must be CONNECTED or DISCONNECTED???
+                        if(this.state === ChatUser.CONNECTED || this.state === ChatUser.DISCONNECTED){
+                            if(debug) log("debug", "command parse > search request")
+                            this.setState(ChatUser.LOOKING);
+                        }
                     } else if(parsedMsg.body === ChatUser._disconnect){
                         //user has requested to disconnect
                         //user must be either PAIRED or LOOKING

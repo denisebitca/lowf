@@ -3,5 +3,6 @@
     "debug": false,
 	"websitedomain": "lowf.codes",
     "logDir": "",
-    "reportDir": ""
+    "reportDir": "",
+    "websiteDir": ""
 }
