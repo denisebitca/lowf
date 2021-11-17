@@ -1,4 +1,4 @@
-var host = "wss://lowf.codes";
+var host = "wss://"+location.hostname.replace("www.","");
 var ws = new WebSocket(host);
 var msg;
 ws.onmessage = msgParser;

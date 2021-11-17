@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "The website for low-effort chatting",
   "scripts": {
-    "build-css": "npx sass style.scss ../public/style.css && postcss ../public/style.css -o ../public/style.css",
-    "build-js": "npx minify app.js --outFile ../public/app.min.js",
-    "build": "pm2 stop lowf && rm -rf ../public && mkdir ../public && mkdir ../public/logs && npm run-script build-css && npm run-script build-js && cp -rv ./node_modules/cookie-notice/dist/cookie.notice.min.js ./node_modules/bootstrap/dist/js/bootstrap.min.js ./offline.html ./node_modules/bootstrap/dist/js/bootstrap.min.js.map ./node_modules/bootstrap-material-design-icons/fonts ./sounds ./images ./node_modules/popper.js/dist/umd/popper.min.js ./error.html ./worker.js ./tos.txt ./privatepolicy.txt ./notify.min.js ./robots.txt ./sw.js ./index.html ./node_modules/animate.css/animate.min.css ./spin.css ./manifest.webmanifest ./favicon.ico ./node_modules/bootstrap-material-design-icons/css/material-icons.min.css ./node_modules/jquery/dist/jquery.min.js ./node_modules/jquery/dist/jquery.min.map ../public/ && pm2 start lowf"
+    "build-css": "npx sass style.scss dist/style.css && postcss dist/style.css -o dist/style.css",
+    "build-js": "npx minify app.js --outFile dist/app.min.js",
+    "build": "rm -rf dist && mkdir dist && npm run-script build-css && npm run-script build-js && cp -rv ./node_modules/cookie-notice/dist/cookie.notice.min.js ./node_modules/bootstrap/dist/js/bootstrap.min.js ./offline.html ./node_modules/bootstrap/dist/js/bootstrap.min.js.map ./node_modules/bootstrap-material-design-icons/fonts ./sounds ./images ./node_modules/popper.js/dist/umd/popper.min.js ./error.html ./worker.js ./tos.txt ./privatepolicy.txt ./notify.min.js ./robots.txt ./sw.js ./index.html ./node_modules/animate.css/animate.min.css ./spin.css ./manifest.webmanifest ./favicon.ico ./node_modules/bootstrap-material-design-icons/css/material-icons.min.css ./node_modules/jquery/dist/jquery.min.js ./node_modules/jquery/dist/jquery.min.map dist"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,8 @@
     "postcss-cli": "^8.3.1"
   },
   "devDependencies": {
-    "babel-minify": "^0.5.1",
-    "cssnano": "^4.1.11",
-    "http-server": "^0.12.3",
+    "babel-minify": "^0.2.0",
+    "cssnano": "^5.0.9",
     "sass": "^1.22.9"
   }
 }

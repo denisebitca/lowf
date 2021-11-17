@@ -405,6 +405,8 @@ if(getCookie("sound") === "off"){
     $("#sound").prop("checked", "")
 }
 
+//TODO: AAAAAAAAAAAA THIS IS HORRIBLE :sob:
+
 function darkmode(check){
     if(getCookie("darkmode") && !check){
         if(getCookie("darkmode") === "false"){
