@@ -167,3 +167,7 @@ Title is self explanatory. I don't have the slightest clue on how to get more th
 ### Interest pairing
 
 Add interests and allow users with similar interests to connect with each other.
+
+### Captcha support
+
+This is to be able to prevent having issues with bots. Ideally I'd also like to add an automatic disconnecter in case the user stays in a state like "LOOKING" or "DISCONNECTED" for too long.
