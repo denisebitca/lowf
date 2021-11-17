@@ -146,7 +146,9 @@ Here is a client-side exchange in which a client connects to the websocket serve
 ```
 
 The client, which upon connection is CONNECTED, gives the server its username, then requests to start searching. The server responds with a confirmation of the client's state changing to LOOKING, then sends another state change to the client, this time informing the client is PAIRED. The state change message also includes the username of the other client.
-### TODOs
+
+## TODOs
+### Administration panel
 The client can also theoretically receive a few extra messages from the server:
 
 ```
@@ -158,3 +160,10 @@ The maintenance type is not implemented in the backend and is accounted for in t
 
 The message type is exclusively for system broadcasts and personal messages, both of which are implemented in the backend and accounted for in the frontend, but currently, there is no way to actually trigger these functions - they are meant to be used in an administrative panel once I get around doing so.
 
+### Stress test with more than 4 people
+
+Title is self explanatory. I don't have the slightest clue on how to get more than 4 people to test the service out simultaneously.
+
+### Interest pairing
+
+Add interests and allow users with similar interests to connect with each other.
