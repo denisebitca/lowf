@@ -1,4 +1,4 @@
-var host = "wss://"+location.hostname.replace("www.","");
+var host = "wss://"+location.href.replace(location.protocol+"//", "");
 var ws = new WebSocket(host);
 var msg;
 ws.onmessage = msgParser;
