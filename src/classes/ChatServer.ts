@@ -29,6 +29,7 @@ export class ChatServer {
 
         //Setting up Express routes
         ChatServer.app.use('/', express.static(config.websiteDir));
+        ChatServer.app.use('/logs', express.static(config.logDir));
 
         if(debug){
             ChatServer.server = ChatServer.app.listen(port, ()=>{
