@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafaelbitca/lowf.git"
+    "url": "git+https://github.com/denisebitca/lowf.git"
   },
-  "author": "Rafael Bitca",
+  "author": "Denise Bitca",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rafaelbitca/lowf/issues"
+    "url": "https://github.com/denisebitca/lowf/issues"
   },
-  "homepage": "https://github.com/rafaelbitca/lowf#readme",
+  "homepage": "https://github.com/denisebitca/lowf#readme",
   "dependencies": {
     "animate.css": "^3.7.2",
     "bootstrap": "^4.3.1",
