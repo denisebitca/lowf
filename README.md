@@ -1,7 +1,7 @@
 # lowf (backend)
 ## Attention (November 2nd)
 
-**I am currently documenting and cleaning up the lowf codebase. If you want to see lowf in action, you can either go on https://lowf.codes or https://projects.rafaelbitca.me/lowf (first one is being run off my local server, second one is being run off a DigitalOcean droplet). If you want to run lowf by yourself, you will have to give me a moment, as I finish splitting the front and the backend.**
+**I am currently documenting and cleaning up the lowf codebase. If you want to see lowf in action, you can either go on https://lowf.codes or https://projects.3644859.xyz/lowf (first one is being run off my local server, second one is being run off a DigitalOcean droplet). If you want to run lowf by yourself, you will have to give me a moment, as I finish splitting the front and the backend.**
 
 ## Description
 low-effort one-on-one chatting: just pick a name!
